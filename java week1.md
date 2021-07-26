@@ -5,9 +5,9 @@
 <ul>
 	<li>java中long、float变量的声明:<br>
 		java中对long与float类型变量的处理与其他语言相比稍有不同，体现在：<br>
-		<img src="https://github.com/SaltyFishy/java/blob/main/long%20float.jpg">
+		<img src="https://github.com/SaltyFishy/java/blob/main/long%20float.jpg"><br>
 		这样的代码会报错，报错提示:<br>
-		<img src="https://github.com/SaltyFishy/java/blob/main/long%20float%E6%8A%A5%E9%94%99%E6%8F%90%E7%A4%BA.jpg">
+		<img src="https://github.com/SaltyFishy/java/blob/main/long%20float%E6%8A%A5%E9%94%99%E6%8F%90%E7%A4%BA.jpg"><br>
 		原因分析：java默认整数类型为int、浮点数类型为double，而不管你前面的类型写的是什么。<br>
 		解决方案：在long声明的变量后面加上L、float加上f<br>
 		<img src="https://github.com/SaltyFishy/java/blob/main/long%20float%20correct.jpg">
