@@ -12,17 +12,24 @@
 		解决方案：在long声明的变量后面加上L、float加上f<br>
 		<img src="https://github.com/SaltyFishy/java/blob/main/long%20float%20correct.jpg">
 	</li>
+	<li>java中算术表达式包含多个基本类型时，整个表达式的类型会自动提升，由此可能会引发一些小问题：<br>
+	<img src="https://github.com/SaltyFishy/java/blob/main/%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98.jpg" alt="类型提升带来的问题"><br>
+	而java中的类型等级：byte,short,char—> int —> long—> float —> double<br>
+	可以看到，由于算术表达式的等级提升，编译无法通过（在java中容量大的类型转换为容量小的类型只能用强制转换），此时可以加入强制类型转换解决。<br>
+	或有些特别的运算符是包括了强制类型转换的，如：+=、-=、*=等	
+	</li>
+	<li>位运算：<br>
+	菜鸟教程给出了详细的位运算符及其解释,其本质上是二进制的计算。<br>
+	<img src="https://github.com/SaltyFishy/java/blob/main/%E4%BD%8D%E8%BF%90%E7%AE%97.jpg" alt="位运算"><br>
+	</li>
 
-	<li></li>
+
+	<li>
+	</li>
 
 
-	<li></li>
-
-
-	<li></li>
-
-
-	<li></li>
+	<li>
+	</li>
 
 
 	<li></li>
