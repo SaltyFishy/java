@@ -22,9 +22,12 @@
 	菜鸟教程给出了详细的位运算符及其解释,其本质上是二进制的计算。<br>
 	<img src="https://github.com/SaltyFishy/java/blob/main/%E4%BD%8D%E8%BF%90%E7%AE%97.jpg" alt="位运算"><br>
 	</li>
-
-
-	<li>
+	<li>JDK12给出了关于switch语句的一个性特性：switch的返回值，传统的swicth case给某个变量赋值是这样的：<br>
+	<img src="https://github.com/SaltyFishy/java/blob/main/%E4%BC%A0%E7%BB%9Fswicth%E8%B5%8B%E5%80%BC.jpg" alt="传统swicth赋值"><br>
+	新方法可以简单实现（并且使用->可以避开使用break语句）：<br>
+	<img src="https://github.com/SaltyFishy/java/blob/main/JDK12%E5%90%8E%E7%9A%84%E6%96%B0%E6%96%B9%E6%B3%95.jpg" alt="JDK12后的新方法"><br>
+	当case后面的语句过于复杂要用花括号括起来时，需要用关键字yield来进行赋值：<br>
+	<img src="https://github.com/SaltyFishy/java/blob/main/yield.jpg" alt="yield">
 	</li>
 
 
