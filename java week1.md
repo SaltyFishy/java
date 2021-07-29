@@ -1,6 +1,6 @@
 <h1>JAVA</h1>
 回归老本行，毕竟以前学过那么一丢丢java，现在再回来看java，相当于复习了。。第一周就先复习一点以前学过的知识，顺便再推进一下进度吧。
-<h2>复习模块</h2>
+<h2>复习板块</h2>
 此模块用于描述复习java的相关知识，包括一些零碎的知识点等。
 <ul>
 	<li>java中long、float变量的声明:<br>
@@ -29,23 +29,64 @@
 	当case后面的语句过于复杂要用花括号括起来时，需要用关键字yield来进行赋值：<br>
 	<img src="https://github.com/SaltyFishy/java/blob/main/yield.jpg" alt="yield">
 	</li>
-
-
-	<li>
+	<li>不同于C++，java并不支持多重继承，也就不存在C++特有的菱形继承
 	</li>
-
-
+	<li>类似C++，java中也存在继承、函数重写、深浅拷贝，java中使用extends关键字表示继承，函数重写、深浅拷贝同C++一致</li>
+	<li>同C++一样，java存在对方法（函数）的重载，要求一致：参数类型或参数个数或参数顺序至少有一个不同</li>
+	<li>this的两种用法：<br>
+	1.与C++中的this一致，指对象本身，但调用格式有所不同:this.xxxx<br>
+	2.this(),必须放在构造方法的第一行，表示一个构造方法对其它构造方法的调用
+	</li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
 	<li></li>
 
 
+
+
+</ul>
+<h2>新知识板块</h2>
+<ul>
+	<li>数据输入：</li>
+	
+```java
+import java.util.Scanner;//导包，不可修改
+Scanner sc = new Scanner(System.in);//创建对象，除sc外均不可修改
+int i = sc.nextInt();//接收数据
+```
+<br>
+	<li>随机数：</li>
+
+```java
+import java.util.Random;//导包，不可修改
+Random r = new Random();//创建对象，除r外均不可修改
+int i = r.nextInt(10);//获取随机数，10表示上限为10（不包括），取值为从0（包括）开始。
+```
+	<li>super及其用法：<br>
+	1.super调用超类的构造方法：<br>
+	格式为super(参数);<br>
+	必须放在第一行，表示子类的构造方法调用了超类的构造方法。<br>
+	2.用来访问被子类的成员隐藏的超类成员<br>
+	格式为super.参数(方法、变量等);
+	</li>
+	<li>finalize()方法的使用<br>
+	格式为
+
+```java
+	protected void finalize() throws throwable
+	{……}
+```
+<br>
+	如果为子类调用该方法，需要同时调用父类的该方法，需要在语句中加上super.finalize();
+
+	</li>
+	<li>final关键字:<br>
+	在类名前加final表示该类为最终类，不可被继承，在方法名前加表示该方法不可被重写，在变量前加表示该变量为常量不可被修改。</li>
 	<li></li>
-
-
 	<li></li>
-
-
 	<li></li>
-
 
 
 
