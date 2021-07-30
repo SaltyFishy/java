@@ -128,17 +128,17 @@ package 包名;//多级包用.分开
 	第一种方法，手动：<br>
 	<ol>
 		<li>编写一个包<br>
-		<img src="" alt="包"></li>
+		<img src="https://github.com/SaltyFishy/java/blob/main/%E5%8C%85.jpg" alt="包"></li>
 		<li>编译（正常写编译代码），生成class文件</li>
 		<li>将class文件放入包文件夹下</li>
 		<li>带包名执行<br>
-		<img src="" alt="包1"></li>
+		<img src="https://github.com/SaltyFishy/java/blob/main/%E5%8C%851.jpg" alt="包1"></li>
 	</ol>
 	第二种方法：自动生成目录<br>
 	<ol>
 		<li>编写一个包（同方法1）</li>
 		<li>编译：<br>
-		<img src="" alt="自动生成目录"></li>
+		<img src="https://github.com/SaltyFishy/java/blob/main/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95.jpg" alt="自动生成目录"></li>
 		<li>带包名执行（同方法1）</li>
 	</ol>
 	</li>
@@ -155,7 +155,7 @@ package 包名;//多级包用.分开
 	</strong>
 	</li>
 	<li>java中的访问权限修饰：
-	<img src="" alt="访问权限修饰"><br>
+	<img src="https://github.com/SaltyFishy/java/blob/main/%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0.jpg" alt="访问权限修饰"><br>
 	protected有一种特殊情况，当子类与基类不在同一包中：那么在子类中，子类实例不能访问基类实例的protected方法。</li>
 	<li>内部类：<br>
 	
