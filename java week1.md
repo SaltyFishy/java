@@ -41,14 +41,6 @@
 	1.抽象类，格式为public abstract class ....{....}<br>
 	2.抽象方法，格式为abstract 返回类型 function(参数);<br>
 	一个包含了抽象方法的类必为抽象类，它的子类需要为该超类写出抽象方法的具体实现</li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-
-
-
-
 </ul>
 <h2>新知识板块</h2>
 <ul>
@@ -96,6 +88,7 @@ int i = r.nextInt(10);//获取随机数，10表示上限为10（不包括），�
 	除非实现接口的类是抽象类，否则该类要定义接口中的所有方法。<br>
 	接口无法被实例化，但是可以被实现。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。<br>
 	<strong>总的来说，接口是一个需要被类所实现的抽象方法的集合，并且它支持多继承。</strong><br>
+	故：接口中的成员变量只能是常量（因为有public final关键字），接口中的方法只能是抽象方法（public abstract），即使不写也会默认是抽象方法。<br>
 	声明格式： 
 
 ```java
@@ -158,12 +151,56 @@ package 包名;//多级包用.分开
 	<img src="https://github.com/SaltyFishy/java/blob/main/%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0.jpg" alt="访问权限修饰"><br>
 	protected有一种特殊情况，当子类与基类不在同一包中：那么在子类中，子类实例不能访问基类实例的protected方法。</li>
 	<li>内部类：<br>
-	
+	内部类的特点：<br>
+	<ol>
+		<li>内部类可以直接访问外部类的成员（包括private）</li>
+		<li>外部类要访问内部类的成员必须要先创建对象</li>
+	</ol>
+	基本结构：<br>
+	<img src="https://github.com/SaltyFishy/java/blob/main/%E5%86%85%E9%83%A8%E7%B1%BB%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.jpg" alt="内部类基本结构"><br>
+	成员式内部类（或称非静态内部类或对象成员内部类）的三种操作：<br>
+	<ul>
+		<li>非静态内部类访问外部类（不常用）<br>
+		<img src="https://github.com/SaltyFishy/java/blob/main/%E9%9D%9E%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E8%AE%BF%E9%97%AE%E5%A4%96%E9%83%A8%E7%B1%BB.jpg" alt="非静态内部类访问外部类">
+		</li>
+		<li>在外部内中访问非静态内部类<br>
+		<img src="https://github.com/SaltyFishy/java/blob/main/%E5%9C%A8%E5%A4%96%E9%83%A8%E5%86%85%E4%B8%AD%E8%AE%BF%E9%97%AE%E9%9D%9E%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB.jpg" alt="在外部内中访问非静态内部类">
+		</li>
+		<li>在外部类外访问非静态内部类<br>
+		<img src="https://github.com/SaltyFishy/java/blob/main/%E5%9C%A8%E5%A4%96%E9%83%A8%E7%B1%BB%E5%A4%96%E8%AE%BF%E9%97%AE%E9%9D%9E%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB.jpg" alt="在外部类外访问非静态内部类">
+		</li>
+	</ul>	
+	<strong>注意这里,在外部类外声明内部类变量有两种方法：
+	<ol>
+		<li>直接声明一个内部类对象<br>
+			格式:外部类类名.内部类类名 对象名 = new 外部类类名().new 内部类类名();<br>
+			例:
 
+```java 
+Outer.Inner on1 = new Outer().new Inner();
+```
+		</li>
+		<li>先声明一个外部类对象，再由此生成一个内部类对象<br>
+			格式: 外部类类名 外部类对象名 = new 外部类类名();<br>
+				外部类类名.内部类类名 内部类对象名 = 外部类类名.new 内部类类名();<br>
+			例:
 
-
-
-
+```java
+Outer ot = new Outer();
+Outer.Inner on2 = ot.new Inner();
+```
+		</li>
+	</ol>
+	</strong>
+	静态内部类（成员式内部类）的两种操作：<br>
+	<ol>
+		<li>在外部类中访问静态内部类<br>
+		<img src="https://github.com/SaltyFishy/java/blob/main/%E5%9C%A8%E5%A4%96%E9%83%A8%E7%B1%BB%E4%B8%AD%E8%AE%BF%E9%97%AE%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB.jpg" alt="在外部类中访问静态内部类">
+		</li>
+		<li>在外部类外访问静态内部类<br>
+		<img src="https://github.com/SaltyFishy/java/blob/main/%E5%9C%A8%E5%A4%96%E9%83%A8%E7%B1%BB%E5%A4%96%E8%AE%BF%E9%97%AE%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB.jpg" alt="在外部类外访问静态内部类">
+		</li>
+	</ol>
 	</li>	
 	<li></li>
 	<li></li>
