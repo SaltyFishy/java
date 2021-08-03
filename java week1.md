@@ -227,11 +227,11 @@ Outer.Inner ot=new Outer.Inner();
 	tips:匿名内部类也可以写在外部类的成员函数内部，成为局部匿名内部类。<br>
 	tips:由于匿名内部类本质上是一个对象（继承了外部类或实现了该接口），在某些情况下它可以直接作为参数,这样使用的目的是为了避免创建更多的类。<br>
 	<img src="https://github.com/SaltyFishy/java/blob/week-1/%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E5%81%9A%E5%8F%82%E6%95%B0.jpg" alt="匿名内部类做参数"><br>
-	<a href="https://www.bilibili.com/video/BV18J411W7cE?p=193">详情可参考此处</a>
+	<a href="https://www.bilibili.com/video/BV18J411W7cE?p=193" target="_blank">详情可参考此处</a>
 	<li>自动装箱与拆箱<br>
 	要理解什么是自动装箱，首先要理解箱指的是什么。正如c、c++等编程语言一样，java存在一些基本数据类型，如int、char、float，同时在java中还存在着<strong>与之对应的包装类</strong><br>
 	<img src="https://github.com/SaltyFishy/java/blob/week-1/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8C%85%E8%A3%85%E7%B1%BB.jpg" alt="基本数据类型包装类"><br>
-	包装类有许多方法，具体可以在<a href="https://tool.oschina.net/apidocs/apidoc?api=jdk-zh">在线帮助文档</a><br>
+	包装类有许多方法，具体可以在<a href="https://tool.oschina.net/apidocs/apidoc?api=jdk-zh" target="_blank">在线帮助文档</a><br>
 	那么什么是自动装箱与拆箱？自动装箱就是Java自动将原始类型值转换成对应的对象，可以将原始类型数据打包为包装类。比如将int的变量转换成Integer对象，这个过程叫做装箱，反之将Integer对象转换成int类型值，每当需要一个值时，被包装对象中的值就被自动地提取出来，这个过程叫做拆箱。<br>
 	<img src="https://github.com/SaltyFishy/java/blob/week-1/%E8%87%AA%E5%8A%A8%E8%A3%85%E7%AE%B1%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%8B%86%E7%AE%B1.jpg" alt="自动装箱与自动拆箱"><br>
 	</li>
@@ -239,7 +239,7 @@ Outer.Inner ot=new Outer.Inner();
 	枚举是一种特殊的类，一般表示一组常量，这些常量总体上具有某种关系，如红色、蓝色、绿色都属于颜色，就可以写出这样的枚举类<br>
 	<img src="https://github.com/SaltyFishy/java/blob/week-1/%E9%A2%9C%E8%89%B2%E6%9E%9A%E4%B8%BE%E7%B1%BB.jpg" alt="颜色枚举类"><br>
 	枚举还有很多自带的定义好的方法，在枚举类中也可以自己写方法，构造函数等<br>
-	<a href="https://www.runoob.com/java/java-enum.html">菜鸟教程——枚举</a></li>
+	<a href="https://www.runoob.com/java/java-enum.html" target="_blank">菜鸟教程——枚举</a></li>
 	<li>注解<br>
 	注解的内容繁多复杂，总结起来较为繁琐，因此暂时列出一个<a href="https://blog.csdn.net/qq1404510094/article/details/80577555?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162799387216780265456577%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=162799387216780265456577&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-80577555.pc_search_download_positive&utm_term=java%E6%B3%A8%E8%A7%A3&spm=1018.2226.3001.4187">注解参考</a>以供参考，未来进行总结
 	</li>
