@@ -235,7 +235,7 @@ Outer.Inner ot=new Outer.Inner();
 	那么什么是自动装箱与拆箱？自动装箱就是Java自动将原始类型值转换成对应的对象，可以将原始类型数据打包为包装类。比如将int的变量转换成Integer对象，这个过程叫做装箱，反之将Integer对象转换成int类型值，每当需要一个值时，被包装对象中的值就被自动地提取出来，这个过程叫做拆箱。<br>
 	<img src="https://github.com/SaltyFishy/java/blob/week-1/%E8%87%AA%E5%8A%A8%E8%A3%85%E7%AE%B1%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%8B%86%E7%AE%B1.jpg" alt="自动装箱与自动拆箱"><br>
 	</li>
-	<li>枚举<br<
+	<li>枚举<br>
 	枚举是一种特殊的类，一般表示一组常量，这些常量总体上具有某种关系，如红色、蓝色、绿色都属于颜色，就可以写出这样的枚举类<br>
 	<img src="https://github.com/SaltyFishy/java/blob/week-1/%E9%A2%9C%E8%89%B2%E6%9E%9A%E4%B8%BE%E7%B1%BB.jpg" alt="颜色枚举类"><br>
 	枚举还有很多自带的定义好的方法，在枚举类中也可以自己写方法，构造函数等<br>
@@ -244,12 +244,45 @@ Outer.Inner ot=new Outer.Inner();
 	注解的内容繁多复杂，总结起来较为繁琐，因此暂时列出一个<a href="https://blog.csdn.net/qq1404510094/article/details/80577555?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162799387216780265456577%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=162799387216780265456577&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-80577555.pc_search_download_positive&utm_term=java%E6%B3%A8%E8%A7%A3&spm=1018.2226.3001.4187">注解参考</a>以供参考，未来进行总结
 	</li>
 	<li>Lambda 表达式<br>
+	要了解Lambda表达式，首先要理解的一个关键是函数式编程<br>
+	与之前我们所学的过程性编程（命令式编程）、声明式编程（以数据结构的形式表达程序执行的逻辑）、面向对象编程（创建对象，做出行为）不同，函数式编程关注的是<strong>我们要做什么，而不是怎么做（这一点上与声明式编程相似，但函数式编程不仅仅局限于声明式编程）</strong><br>
+	有关函数式编程的东西很多，但我们的重点是Lambda表达式，所以这里给出一个<a href="https://zhuanlan.zhihu.com/p/363757919" target="_blank">链接</a>，不展开<br>
+	在前面我们学习了利用匿名内部类直接作为函数参数，可以减少有关于类的设计，但是它的本质还是创建了一个对象，仍然是面向对象程序设计的思想，并且代码看起来似乎有些过于冗长了，借由函数式编程，Java也引入了这一思想，实现了Lambda表达式。<br>
+	标准格式：<br>
 	
-
-
-
-
-
-
+···java
+(形式参数) -> {代码块} //代码块的内容为方法体的内容
+```
+<br>
+	适用前提：
+	<ol>
+		<li>有一个接口</li>
+		<li>接口中有且仅有一个抽象方法</li>
+	</ol>
+	无参无返回值实例：<br>
+	<img src="" alt="Lambda表达式无参无返回值"><br>
+	有参无返回值实例：<br>
+	<img src="" alt="Lambda表达式带参无返回值"><br>
+	有参有返回值实例：<br>
+	<img src="" alt="Lambda表达式带参带返回值"><br>
+	省略模式：<br>
+	<ol>
+		<li>参数的类型可以忽略</li>
+		<li>多个参数时不能只忽略其中某些个（要么全省略要么全不省略）</li>
+		<li>如果参数有且仅有一个，小括号可以不写</li>
+		<li>如果代码块的语句有且仅有一条（除非仅有的一条语句为return语句），可以省略大括号跟分号</li>
+		<li>如果代码块的语句有且仅有一条return语句，则return、大括号、分号都可不写</li>
+	</ol>
+	注意事项：<br>
+	<ol>
+		<li>Lambda表达式必须要求有接口，并且接口中有且仅有一个抽象方法</li>
+		<li>使用Lambda表达式必须要有上下文环境，比如不能直接单独写一个Lambda表达式语句，详情参考<a href="https://www.bilibili.com/video/BV18J411W7cE?p=361">链接</a></li>
+	</ol>
+	Lambda表达式与匿名内部类的区别：<br>
+	<ol>
+		<li>匿名内部类new后面跟的可以是具体类、抽象类跟接口，Lambda则只能是接口</li>
+		<li>匿名内部类new后面的接口可以是多个抽象方法组成的接口，Lambda只能是一个抽象方法组成的接口</li>
+		<li>匿名内部类编译后会单独产生一个class字节码文件，Lambda则不会</li>
+	</ol>
 	</li>
 </ul>
