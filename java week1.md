@@ -260,11 +260,11 @@ Outer.Inner ot=new Outer.Inner();
 		<li>接口中有且仅有一个抽象方法</li>
 	</ol>
 	无参无返回值实例：<br>
-	<img src="" alt="Lambda表达式无参无返回值"><br>
+	<img src="https://github.com/SaltyFishy/java/blob/week-1/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%97%A0%E5%8F%82%E6%97%A0%E8%BF%94%E5%9B%9E%E5%80%BC.jpg" alt="Lambda表达式无参无返回值"><br>
 	有参无返回值实例：<br>
-	<img src="" alt="Lambda表达式带参无返回值"><br>
+	<img src="https://github.com/SaltyFishy/java/blob/week-1/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B8%A6%E5%8F%82%E6%97%A0%E8%BF%94%E5%9B%9E%E5%80%BC.jpg" alt="Lambda表达式带参无返回值"><br>
 	有参有返回值实例：<br>
-	<img src="" alt="Lambda表达式带参带返回值"><br>
+	<img src="https://github.com/SaltyFishy/java/blob/week-1/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B8%A6%E5%8F%82%E5%B8%A6%E8%BF%94%E5%9B%9E%E5%80%BC.png" alt="Lambda表达式带参带返回值"><br>
 	省略模式：<br>
 	<ol>
 		<li>参数的类型可以忽略</li>
